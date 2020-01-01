@@ -1,0 +1,160 @@
+:root {
+    --siteColor: #ffffff;
+    --siteHighl: #d6d6d6;
+}
+
+* {
+    font-family: Verdana;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+body {
+    background-color: var(--siteColor);
+}
+
+.head {
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--siteColor);
+    border-bottom: 2px solid var(--siteHighl);
+}
+
+#mainLogo {
+    width: 10vh;
+    height: 10vh;
+}
+
+.sideNav {
+    display: inline-block;
+    text-align: center;
+    width: 15vw;
+    background-color: var(--siteColor);
+    border-right: 2px solid var(--siteHighl);
+    border-bottom: 2px solid var(--siteHighl);
+}
+
+.navLink:link,
+.navLink:visited {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.noSel {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.content {
+    top: 10vh;
+    left: 15vw;
+    position: absolute;
+    display: block;
+    width: 85vw;
+    height: 90vh;
+    overflow: scroll;
+    background: var(--siteHighl);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+.center {
+    text-align: center;
+}
+
+.userRef {
+    margin-left: -60px;
+    font-size: 16px;
+    display: inline-block;
+    width: 10em;
+    height: 5.5em;
+    padding: .5em;
+    border-radius: 1em;
+    white-space: nowrap;
+}
+
+.userTxt {
+    width: 5.5em;
+    background: white;
+}
+
+.userLnk {
+    font-size: 0.8em;
+}
+
+.userImg {
+    width: 3em;
+    height: 3em;
+    border-radius: .5em;
+    margin-right: .5em;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 400px) {
+    .sideNav {
+        width: 0vw;
+    }
+    .content {
+        width: 100vw;
+        left: 0vw;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .navLink {
+        font-size: 0.8em;
+    }
+}
+
+
+/* Expanding Menu */
+
+ul,
+#myUL {
+    list-style-type: none;
+}
+
+#myUL {
+    margin: 0;
+    padding: 0;
+}
+
+.caret {
+    cursor: pointer;
+    user-select: none;
+}
+
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+.nested {
+    display: none;
+}
+
+.active {
+    display: block;
+}
