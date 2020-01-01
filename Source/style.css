@@ -153,6 +153,7 @@ ul,
 
 .nested {
     display: none;
+    margin-left: 1em;
 }
 
 .active {
